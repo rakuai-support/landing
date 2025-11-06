@@ -125,6 +125,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://lp.omotenashiqr.com/blog/kamakura-cycling-multilingual-guide.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lp.omotenashiqr.com/blog/sushi-multilingual-menu-qr.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lp.omotenashiqr.com/blog/kyoto-kimono-rental-multilingual.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- お問い合わせページ -->
   <url>
     <loc>https://lp.omotenashiqr.com/contact.html</loc>
