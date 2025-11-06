@@ -1,0 +1,45 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://lp.omotenashiqr.com/sitemap.xml
+
+# クロール最適化
+Crawl-delay: 1
+
+# 主要ページ
+Allow: /index.html
+Allow: /examples.html
+Allow: /guide.html
+Allow: /contact.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /qr/
+Allow: /data/
+
+# 重要ページの優先クロール
+# メインランディングページ
+Allow: /index.html
+
+# 事例集ページ（SEO重要）
+Allow: /examples.html
+
+# 静的リソース
+Allow: /css/style.css
+Allow: /js/main.js
+Allow: /qr/*.png
+
+# 検索エンジン向け重要キーワード
+# インバウンド対応事例
+# 多言語AI動画
+# おもてなしツール
+# QRコード生成
+# 業界別導入事例
+# 飲食店多言語対応
+# ホテル外国人接客
+# 観光地案内動画
+
+# 最終更新: 2025-09-13
+# 事例集ページ追加に伴うSEO最適化
+# お問い合わせページ追加に伴うSEO最適化

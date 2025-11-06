@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作ガイド | OmotenashiQRMaker</title>
+    <meta name="description" content="「おもてなしQRメーカー」の操作ガイドです。たった5ステップで多言語スライドショー動画を作成する方法を解説。15言語対応のAI動画作成ツールの使い方を画面付きで分かりやすくご案内します。">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <style>
+        /* ガイド専用スタイル */
+        .guide-hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .guide-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .guide-hero .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guide-steps {
+            padding: 5rem 0;
+            background-color: var(--color-background);
+        }
+
+        .step-card {
+            background: var(--color-surface);
+            border-radius: var(--border-radius);
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-base);
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-title-group {
+            flex-grow: 1;
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .step-time {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+            color: var(--color-text-primary);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .step-description {
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .step-features {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--color-background);
+            border-radius: 8px;
+            color: var(--color-text-secondary);
+        }
+
+        .step-features li::before {
+            content: "✓";
+            color: #22c55e;
+            background: #dcfce7;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .step-screenshot {
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .step-screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+        }
+
+        .step-screenshot img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .screenshot-caption {
+            margin-top: 1rem;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--color-primary);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition-base);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .guide-hero h1 {
+                font-size: 2rem;
+            }
+
+            .guide-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .step-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .step-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .step-number {
+                margin-bottom: 1rem;
+            }
+
+            .step-features {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .step-screenshot {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header id="header-placeholder"></header>
+
+    <!-- ヒーローセクション -->
+    <section class="guide-hero">
+        <div class="container">
+            <h1>🎬 超簡単！5ステップガイド</h1>
+            <p class="subtitle">たった5分で完成！15言語対応のAIスライドショー動画作成の流れを分かりやすく解説します</p>
+        </div>
+    </section>
+
+    <!-- ステップガイド -->
+    <section class="guide-steps">
+        <div class="container">
+            <h2 class="section-title">誰でも簡単！5ステップで動画完成</h2>
+
+            <!-- Step 1: コンテンツ生成 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div class="step-title-group">
+                        <h3 class="step-title">🎯 AIで台本を作成します</h3>
+                        <span class="step-time">約30秒</span>
+                    </div>
+                </div>
+                <p class="step-description">
+                    作りたい動画の内容を簡単に入力するだけ！AIが自動で魅力的なコンテンツを生成します。
+                </p>
+                <ul class="step-features">
+                    <li>豊富なテンプレートから選択可能</li>
+                    <li>簡単なキーワードやテーマを入力</li>
+                    <li>AIが日本語台本を自動生成</li>
+                </ul>
+                <div class="step-screenshot">
+                    <img src="images/guide/step1.png" alt="ステップ1: コンテンツ生成画面" loading="lazy">
+                    <p class="screenshot-caption">指示を入力したら【AIで台本を作成する】ボタンを押してください。</p>
+                </div>
+            </div>
+
+            <!-- Step 2: 内容確認・編集 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title-group">
+                        <h3 class="step-title">✏️台本の内容を確認・編集します</h3>
+                        <span class="step-time">約1分</span>
+                    </div>
+                </div>
+                <p class="step-description">
+                    AIが生成したコンテンツを確認して、必要に応じて微調整。あなたの思い通りの内容に仕上げましょう。
+                </p>
+                <ul class="step-features">
+                    <li>生成されたテキストをリアルタイム編集</li>
+                    <li>文章の追加・削除・修正が自由自在</li>
+                    <li>文字数から予想音声時間を自動計算</li>
+                </ul>
+                <div class="step-screenshot">
+                    <img src="images/guide/step2.png" alt="ステップ2: 内容編集画面" loading="lazy">
+                    <p class="screenshot-caption">内容が確定したら【この内容で次に進む】ボタンを押してください。</p>
+                </div>
+            </div>
+
+            <!-- Step 3: 画像選択 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div class="step-title-group">
+                        <h3 class="step-title">🖼️ 背景画像の選択</h3>
+                        <span class="step-time">約1分</span>
+                    </div>
+                </div>
+                <p class="step-description">
+                    スライドショーにしたい美しい背景画像を選択してビジュアルを決定。オリジナル画像も使用可能です。
+                </p>
+                <ul class="step-features">
+                    <li>画像は10枚まで選択可能</li>
+                    <li>オリジナル画像のアップロード対応</li>
+                    <li>複数画像でのスライドショー作成可能</li>
+                </ul>
+                <div class="step-screenshot">
+                    <img src="images/guide/step3.png" alt="ステップ3: 画像選択画面" loading="lazy">
+                    <p class="screenshot-caption">画像の選択が完了したら【音声の生成に進む】ボタンを押してください。</p>
+                </div>
+            </div>
+
+            <!-- Step 4: 音声生成・言語設定 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div class="step-title-group">
+                        <h3 class="step-title">🎵 音声生成、言語設定</h3>
+                        <span class="step-time">約1分</span>
+                    </div>
+                </div>
+                <p class="step-description">
+                    動画の元となる音声の言語設定をします。
+                </p>
+                <ul class="step-features">
+                    <li>Google・Geminiの高品質AI音声合成</li>
+                    <li>15種類の言語が設定可能</li>
+                    <li>ナレーターは設定画面から事前に設定</li>
+                </ul>
+                <div class="step-screenshot">
+                    <img src="images/guide/step4.png" alt="ステップ4: 音声・BGM設定画面" loading="lazy">
+                    <p class="screenshot-caption">準備が完了したら【音声の生成を開始する】ボタンを押してください。</p>
+                </div>
+            </div>
+
+            <!-- Step 5: 動画生成・完成 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <div class="step-title-group">
+                        <h3 class="step-title">🎬 動画生成・BGM字幕設定</h3>
+                        <span class="step-time">約1分</span>
+                    </div>
+                </div>
+                <p class="step-description">
+                    すべての設定が完了したら、ボタン一つで高品質な動画が完成！QRコードも自動生成されます。
+                </p>
+                <ul class="step-features">
+                    <li>BGM追加でより魅力的な動画に（オプション）</li>
+                    <li>字幕表示機能で多言語対応強化（オプション）</li>
+                </ul>
+                <div class="step-screenshot">
+                    <img src="images/guide/step5.png" alt="ステップ5: 動画生成画面" loading="lazy">
+                    <p class="screenshot-caption">動画生成ボタンと完成した動画・QRコード表示画面</p>
+                </div>
+            </div>
+
+            <!-- 動画ライブラリの活用例 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">✨</div>
+                    <div class="step-title-group">
+                        <h3 class="step-title">📱 動画ライブラリの6つの機能</h3>
+                        <span class="step-time">いつでも</span>
+                    </div>
+                </div>
+                <p class="step-description">
+                    完成した動画は動画ライブラリに保存され、いつでもアクセス・共有・編集が可能です。
+                </p>
+                <ul class="step-features">
+                    <li>①動画再生ボタン</li>
+                    <li>②URLコピー</li>
+                    <li>③QRコード発行</li>
+                    <li>④音声ファイルダウンロード</li>
+                    <li>⑤編集モードで内容更新</li>
+                    <li>⑥動画の削除</li>
+                </ul>
+                <div class="step-screenshot">
+                    <img src="images/guide/library.png" alt="動画ライブラリと活用例" loading="lazy">
+                    <p class="screenshot-caption">動画ライブラリ画面と実際の活用例（QRコード印刷物）</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>今すぐ無料で始めよう！</h2>
+            <p>15コイン（15分の動画作成）を無料プレゼント中</p>
+            <a href="/login" class="cta-button">無料で動画を作成する</a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer id="footer-placeholder"></footer>
+
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZFSZEKEPE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BZFSZEKEPE');
+    </script>
+</body>
+</html>

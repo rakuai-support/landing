@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>導入事例集｜15言語での多言語QR活用成功例 | おもてなしQRメーカー（OmotenashiQRMaker）</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZFSZEKEPE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BZFSZEKEPE');
+    </script>
+    
+    <meta name="description" content="OmotenashiQRMakerの実際の導入事例をご覧ください。飲食店・宿泊施設・観光地・交通機関での多言語AI動画活用事例を業界別・言語別で検索可能。日本語・英語・中国語・韓国語・タイ語・スペイン語・イタリア語・フランス語対応の実例を多数掲載。">
+    <meta name="keywords" content="OmotenashiQRMaker事例,インバウンド対応事例,多言語動画事例,業界別導入事例,AI動画生成実例,QRコード活用事例,飲食店事例,ホテル事例,観光地事例,外国人接客事例">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="OmotenashiQRMaker">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lp.omotenashiqr.com/examples.html">
+    <meta property="og:title" content="業界別事例集 - 9業界15言語の実際の導入事例">
+    <meta property="og:description" content="飲食店・ホテル・観光地での多言語AI動画活用事例を業界別・言語別で検索。実際の導入事例を多数掲載。">
+    <meta property="og:image" content="https://lp.omotenashiqr.com/images/examples-og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lp.omotenashiqr.com/examples.html">
+    <meta property="twitter:title" content="業界別事例集 - 9業界15言語の実際の導入事例">
+    <meta property="twitter:description" content="飲食店・ホテル・観光地での多言語AI動画活用事例を業界別・言語別で検索。実際の導入事例を多数掲載。">
+    <meta property="twitter:image" content="https://lp.omotenashiqr.com/images/examples-og-image.jpg">
+
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/modern-style.css?v=20250913" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="stylesheet" href="css/modern-style.css?v=20250913">
+    <link rel="stylesheet" href="css/compact-header.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://lp.omotenashiqr.com/examples.html">
+    <!-- 
+    ===== 動画構造化データ復活（ローカル動画対応） =====
+    理由: lp.omotenashiqr.com ドメイン内に動画をホスティングしたため、
+    SEO価値を外部に流出させることなく構造化データを提供可能
+    --> 
+    <script type="application/ld+json" id="examples-structured-data">
+    </script>
+
+</head>
+<body>
+    <!-- ヘッダー -->
+    <div id="header-placeholder"></div>
+
+    <div class="examples-page">
+        <!-- ヘッダーセクション（コンパクト版） -->
+        <section id="compact-examples-header">
+            <div class="container">
+                <h1>業界別事例集</h1>
+                <p>様々な業界でのOmotenashiQRMaker活用事例をご覧ください</p>
+                <div id="compact-examples-stats">
+                    <div class="compact-stat-item">
+                        <span class="compact-stat-number" id="total-examples">0</span>
+                        <span class="compact-stat-label"><i class="fas fa-file-alt"></i> 事例数</span>
+                    </div>
+                    <div class="compact-stat-item">
+                        <span class="compact-stat-number" id="industry-count">0</span>
+                        <span class="compact-stat-label"><i class="fas fa-building"></i> 業界</span>
+                    </div>
+                    <div class="compact-stat-item">
+                        <span class="compact-stat-number" id="language-count">0</span>
+                        <span class="compact-stat-label"><i class="fas fa-globe"></i> 言語</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        
+
+        <div class="container">
+            <!-- フィルター -->
+            <div class="filters">
+                <div class="filter-group">
+                    <div class="filter-title">検索</div>
+                    <input type="text" id="search-input" placeholder="タイトルや説明文で検索..." style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;" oninput="examplesPage.setSearchQuery(this.value)">
+                </div>
+                <div class="filter-group">
+                    <div class="filter-title">業界で絞り込み</div>
+                    <div class="filter-buttons" id="industry-filters">
+                        <!-- JavaScriptで生成 -->
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <div class="filter-title">言語で絞り込み</div>
+                    <div class="filter-buttons" id="language-filters">
+                        <!-- JavaScriptで生成 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 事例グリッド -->
+            <div class="examples-grid" id="examples-grid">
+                <!-- 動的コンテンツがここに読み込まれます -->
+            </div>
+
+            <!-- 結果なしメッセージ -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <i class="fas fa-search fa-3x" style="color: #cbd5e1; margin-bottom: 1rem;"></i>
+                <h3>該当する事例が見つかりませんでした</h3>
+                <p>フィルターを変更してお試しください</p>
+            </div>
+
+            <!-- CTA -->
+            <div class="gallery-cta" style="margin-top: 3rem;">
+                <p>あなたも同じような動画を作成してみませんか？</p>
+                <a href="https://omotenashiqr.com/login" class="btn-primary large">無料で動画を作成してみる</a>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <script>
+        class ExamplesPage {
+            constructor() {
+                this.examples = [];
+                this.filteredExamples = [];
+                this.activeIndustry = 'all';
+                this.activeLanguage = 'all';
+                this.searchQuery = '';
+                this.init();
+            }
+
+            async init() {
+                await this.loadExamples();
+                this.renderFilters();
+                this.renderExamples();
+                this.updateStats();
+            }
+
+            async loadExamples() {
+                try {
+                    // リトライ機能付きでデータを読み込み
+                    this.examples = await this.loadExamplesWithRetry();
+                    this.filteredExamples = [...this.examples];
+
+                    // データ形式の検証
+                    if (!Array.isArray(this.examples) || this.examples.length === 0) {
+                        throw new Error('Invalid data format: examples must be a non-empty array');
+                    }
+
+                    // 構造化データを生成
+                    this.generateStructuredData();
+                } catch (error) {
+                    console.error('Error loading examples data:', error);
+                    this.handleLoadError(error);
+                }
+            }
+
+            renderFilters() {
+                // 業界フィルター
+                const industries = [...new Set(this.examples.map(e => e.industry))].sort();
+                const industryFilters = document.getElementById('industry-filters');
+                
+                industryFilters.innerHTML = `
+                    <button class="filter-btn active" onclick="examplesPage.setIndustryFilter('all')">すべて (${this.examples.length})</button>
+                    ${industries.map(industry => {
+                        const count = this.examples.filter(e => e.industry === industry).length;
+                        return `<button class="filter-btn" onclick="examplesPage.setIndustryFilter('${industry}')">${industry} (${count})</button>`;
+                    }).join('')}
+                `;
+
+                // 言語フィルター
+                const languages = [...new Set(this.examples.map(e => e.language))].sort();
+                const languageFilters = document.getElementById('language-filters');
+                
+                languageFilters.innerHTML = `
+                    <button class="filter-btn active" onclick="examplesPage.setLanguageFilter('all')">すべて (${this.examples.length})</button>
+                    ${languages.map(language => {
+                        const count = this.examples.filter(e => e.language === language).length;
+                        return `<button class="filter-btn" onclick="examplesPage.setLanguageFilter('${language}')">${language} (${count})</button>`;
+                    }).join('')}
+                `;
+            }
+
+            setIndustryFilter(industry) {
+                this.activeIndustry = industry;
+                this.updateActiveFilters('industry-filters', industry);
+                this.applyFilters();
+            }
+
+            setLanguageFilter(language) {
+                this.activeLanguage = language;
+                this.updateActiveFilters('language-filters', language);
+                this.applyFilters();
+            }
+
+            updateActiveFilters(containerId, activeValue) {
+                const container = document.getElementById(containerId);
+                const buttons = container.querySelectorAll('.filter-btn');
+                
+                buttons.forEach(btn => {
+                    btn.classList.remove('active');
+                    const btnText = btn.textContent.split(' ')[0];
+                    if (btnText === activeValue || (activeValue === 'all' && btnText === 'すべて')) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
+
+            setSearchQuery(query) {
+                this.searchQuery = query.toLowerCase();
+                this.applyFilters();
+            }
+
+            applyFilters() {
+                this.filteredExamples = this.examples.filter(example => {
+                    const industryMatch = this.activeIndustry === 'all' || example.industry === this.activeIndustry;
+                    const languageMatch = this.activeLanguage === 'all' || example.language === this.activeLanguage;
+                    const searchMatch = this.searchQuery === '' || 
+                        example.title.toLowerCase().includes(this.searchQuery) ||
+                        example.description.toLowerCase().includes(this.searchQuery) ||
+                        example.business_type.toLowerCase().includes(this.searchQuery);
+                    
+                    return industryMatch && languageMatch && searchMatch;
+                });
+
+                this.renderExamples();
+            }
+
+            renderExamples() {
+                const grid = document.getElementById('examples-grid');
+                const noResults = document.getElementById('no-results');
+
+                if (this.filteredExamples.length === 0) {
+                    grid.style.display = 'none';
+                    noResults.style.display = 'block';
+                    return;
+                }
+
+                grid.style.display = 'grid';
+                noResults.style.display = 'none';
+
+                grid.innerHTML = this.filteredExamples.map(example => `
+                    <div class="example-card" data-industry="${example.industry}" data-language="${example.language}">
+                        <div class="example-header">
+                            <img src="${example.video_thumbnail}" alt="${example.language}" class="language-thumbnail">
+                            <div class="example-meta">
+                                <span class="industry-badge">${example.industry}</span>
+                                <h3 class="example-title">${example.title}</h3>
+                            </div>
+                        </div>
+                        <div class="example-body">
+                            <p class="example-description">${example.description}</p>
+                            <div class="example-actions">
+                                <a href="${example.video_url}" target="_blank" class="play-btn">🎬 再生する</a>
+                                <img src="${example.qr_image}" alt="QRコード" class="qr-preview">
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            updateStats() {
+                const totalExamples = this.examples.length;
+                const uniqueIndustries = [...new Set(this.examples.map(e => e.industry))].length;
+                const uniqueLanguages = [...new Set(this.examples.map(e => e.language))].length;
+                
+                console.log('統計情報:', {
+                    総事例数: totalExamples,
+                    業界数: uniqueIndustries,
+                    言語数: uniqueLanguages
+                });
+                
+                // カウントアップアニメーション
+                this.animateCounter('total-examples', totalExamples);
+                this.animateCounter('industry-count', uniqueIndustries);
+                this.animateCounter('language-count', uniqueLanguages);
+            }
+            
+            animateCounter(elementId, targetValue) {
+                const element = document.getElementById(elementId);
+                if (!element) {
+                    console.error(`要素が見つかりません: ${elementId}`);
+                    return;
+                }
+                
+                const startValue = 0;
+                const duration = 1000; // 1秒
+                const startTime = Date.now();
+                
+                console.log(`カウンター開始: ${elementId} -> ${targetValue}`);
+                
+                const updateCounter = () => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const currentValue = Math.floor(startValue + (targetValue - startValue) * progress);
+                    
+                    element.textContent = currentValue;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        console.log(`カウンター完了: ${elementId} = ${targetValue}`);
+                    }
+                };
+                
+                updateCounter();
+            }
+
+            // エラーハンドリング強化メソッド
+            handleLoadError(error) {
+                const grid = document.getElementById('examples-grid');
+                const noResults = document.getElementById('no-results');
+                
+                if (grid) {
+                    // エラータイプに応じた詳細メッセージ
+                    let errorMessage = '事例の読み込みに失敗しました。';
+                    if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
+                        errorMessage = 'インターネット接続を確認してページを再読み込みしてください。';
+                    } else if (error.message.includes('HTTP error')) {
+                        errorMessage = 'サーバーに接続できません。しばらく待ってから再試行してください。';
+                    } else if (error.name === 'SyntaxError') {
+                        errorMessage = 'データの形式が正しくありません。サイト管理者にお問い合わせください。';
+                    }
+                    
+                    grid.innerHTML = `
+                        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: white; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            <div style="color: #dc2626; font-size: 3rem; margin-bottom: 1rem;">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h3 style="color: #dc2626; margin-bottom: 1rem;">読み込みエラー</h3>
+                            <p style="color: #64748b; margin-bottom: 1.5rem;">${errorMessage}</p>
+                            <button onclick="location.reload()" style="background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">
+                                <i class="fas fa-sync-alt" style="margin-right: 0.5rem;"></i>ページを再読み込み
+                            </button>
+                        </div>
+                    `;
+                }
+                
+                // 統計情報をエラー状態に設定
+                if (document.getElementById('total-examples')) document.getElementById('total-examples').textContent = '---';
+                if (document.getElementById('industry-count')) document.getElementById('industry-count').textContent = '---';
+                if (document.getElementById('language-count')) document.getElementById('language-count').textContent = '---';
+                
+                // フィルターを無効化
+                const industryFilters = document.getElementById('industry-filters');
+                const languageFilters = document.getElementById('language-filters');
+                if (industryFilters) industryFilters.innerHTML = '<p style="color: #64748b; font-style: italic;">フィルター機能は利用できません</p>';
+                if (languageFilters) languageFilters.innerHTML = '<p style="color: #64748b; font-style: italic;">フィルター機能は利用できません</p>';
+                
+                // 検索フィールドを無効化
+                const searchInput = document.getElementById('search-input');
+                if (searchInput) {
+                    searchInput.disabled = true;
+                    searchInput.placeholder = '読み込みエラーのため検索は利用できません';
+                    searchInput.style.backgroundColor = '#f3f4f6';
+                    searchInput.style.color = '#9ca3af';
+                }
+                
+                if (noResults) noResults.style.display = 'none';
+            }
+
+            // ネットワークエラー検知とリトライ機能
+            async loadExamplesWithRetry(maxRetries = 3, delay = 1000) {
+                for (let attempt = 1; attempt <= maxRetries; attempt++) {
+                    try {
+                        const response = await fetch('data/examples.json');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return await response.json();
+                    } catch (error) {
+                        console.warn(`Attempt ${attempt} failed:`, error.message);
+                        if (attempt === maxRetries) {
+                            throw error; // 最後の試行で失敗した場合はエラーを投げる
+                        }
+                        // 指数バックオフ（1秒、2秒、4秒）
+                        await new Promise(resolve => setTimeout(resolve, delay * attempt));
+                    }
+                }
+            }
+
+            // 構造化データ生成の安全な実装
+            generateStructuredData() {
+                try {
+                    const structuredDataElement = document.getElementById('examples-structured-data');
+                    if (!structuredDataElement || !this.examples || this.examples.length === 0) return;
+
+                    const videoObjects = this.examples.map((example, index) => ({
+                        "@type": "VideoObject",
+                        "position": index + 1,
+                        "name": example.title || `動画 ${index + 1}`,
+                        "description": example.description || "説明がありません",
+                        "contentUrl": example.video_url || "#",
+                        "thumbnailUrl": `https://lp.omotenashiqr.com/${example.video_thumbnail || 'images/default.png'}`,
+                        "uploadDate": (example.created_at || "2025-01-01") + (example.created_at && !example.created_at.includes('T') ? 'T10:00:00+09:00' : '')
+                    }));
+
+                    const itemList = {
+                        "@context": "https://schema.org",
+                        "@type": "CollectionPage",
+                        "name": "OmotenashiQRMaker 業界別事例集",
+                        "description": "OmotenashiQRMakerの多言語AI動画活用事例を業界別・言語別で検索。",
+                        "url": "https://lp.omotenashiqr.com/examples.html",
+                        "mainEntity": {
+                            "@type": "ItemList",
+                            "numberOfItems": this.examples.length,
+                            "itemListElement": videoObjects
+                        }
+                    };
+
+                    structuredDataElement.textContent = JSON.stringify(itemList, null, 2);
+                } catch (error) {
+                    console.error('Error generating structured data:', error);
+                    // 構造化データの生成に失敗してもページ機能は継続
+                }
+            }
+        }
+
+        // ページ読み込み後に初期化
+        let examplesPage;
+        document.addEventListener('DOMContentLoaded', () => {
+            examplesPage = new ExamplesPage();
+        });
+    </script>
+
+    <!-- フッター -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- main.jsを読み込んでヘッダー・フッター共通化を有効にする -->
+    <script src="js/main.js?v=20250913"></script>
+</body>
+</html>
