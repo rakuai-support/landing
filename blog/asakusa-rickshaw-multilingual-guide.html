@@ -29,6 +29,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../css/modern-style.css">
     <link rel="stylesheet" href="../css/compact-header.css">
+    <link rel="stylesheet" href="../css/article-styles.css">
 
     <!-- Structured Data: Article -->
     <script type="application/ld+json">
@@ -86,39 +87,26 @@
     <!-- ヘッダー -->
     <div id="header-placeholder"></div>
 
-    <!-- 記事コンテンツ -->
-    <article class="blog-article">
-        <!-- ヒーロー画像 -->
-        <div class="article-hero">
-            <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=1200&h=600&fit=crop" alt="浅草の人力車" class="article-hero-image">
+    <!-- 記事ヘッダー -->
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-meta">
+                <time datetime="2025-11-29">2025年11月29日</time>
+                <span class="article-category">観光</span>
+                <span class="article-category">東京</span>
+                <span class="article-category">浅草</span>
+            </div>
+            <h1>浅草人力車が変わる – 英語が苦手でも15言語でおもてなし、QRコードで観光ガイド革命</h1>
+            <p class="article-lead">浅草の人力車俥夫が英語が苦手でも15言語で観光案内できるようになった秘密。おもてなしQRメーカーで雷門、浅草寺、仲見世通りの魅力を外国人観光客に伝え、指名が2倍に。観光DXと防災情報の活用事例を紹介します。</p>
+        </header>
+
+        <!-- アイキャッチ画像 -->
+        <div class="article-image">
+            <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=800&h=500&fit=crop" alt="浅草の人力車">
         </div>
 
-        <div class="article-container">
-            <!-- パンくずリスト -->
-            <nav class="breadcrumb">
-                <a href="../index.html">ホーム</a>
-                <span class="separator">›</span>
-                <a href="../blog.html">ブログ</a>
-                <span class="separator">›</span>
-                <span>浅草人力車が変わる</span>
-            </nav>
-
-            <!-- 記事ヘッダー -->
-            <header class="article-header">
-                <div class="article-meta">
-                    <time datetime="2025-11-29" class="article-date">2025年11月29日</time>
-                    <span class="article-reading-time">5分で読める</span>
-                </div>
-                <h1 class="article-title">浅草人力車が変わる – 英語が苦手でも15言語でおもてなし、QRコードで観光ガイド革命</h1>
-                <div class="article-tags">
-                    <span class="tag">観光</span>
-                    <span class="tag">東京</span>
-                    <span class="tag">浅草</span>
-                </div>
-            </header>
-
-            <!-- 記事本文 -->
-            <div class="article-content">
+        <!-- 記事本文 -->
+        <div class="article-content">
                 <h2>英語が苦手な俥夫の悩み</h2>
                 <p>浅草・雷門の前で、今日も多くの観光客が人力車を待っている。29歳の俥夫・高橋一馬さんは、地元下町で育ち、体力と人懐っこさを武器に人力車を引いてきた。</p>
 
@@ -377,33 +365,22 @@
                     <p>初回15コイン無料、クレジットカード登録不要でお試しいただけます。</p>
                     <a href="https://omotenashiqr.com/login" class="btn-primary">無料で始める</a>
                 </div>
-            </div>
-
-            <!-- 関連記事 -->
-            <aside class="related-articles">
-                <h2>関連記事</h2>
-                <div class="related-articles-grid">
-                    <a href="asakusa-sensoji-worship-guide.html" class="related-article-card">
-                        <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=300&h=200&fit=crop" alt="浅草寺" loading="lazy">
-                        <h3>浅草寺で願いを込めて – QR多言語ガイドが導く参拝の作法</h3>
-                    </a>
-                    <a href="tokyo-tea-ceremony-etiquette-guide.html" class="related-article-card">
-                        <img src="https://images.unsplash.com/photo-1545048702-79362596cdc9?w=300&h=200&fit=crop" alt="茶道" loading="lazy">
-                        <h3>一期一会の心を世界へ – 茶道体験をQRコードで15言語おもてなし</h3>
-                    </a>
-                    <a href="tokyo-sightseeing-bus-qr-guide.html" class="related-article-card">
-                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=300&h=200&fit=crop" alt="観光バス" loading="lazy">
-                        <h3>東京を駆ける多言語バス – はとバスが変わる、QRで世界へ発信</h3>
-                    </a>
-                </div>
-            </aside>
-
-            <!-- フッターナビ -->
-            <nav class="article-footer-nav">
-                <a href="../blog.html" class="btn-secondary">ブログ一覧に戻る</a>
-                <a href="../index.html" class="btn-primary">トップページへ</a>
-            </nav>
         </div>
+
+        <!-- 関連記事 -->
+        <aside class="related-articles">
+            <h2>関連記事</h2>
+            <div class="related-grid">
+                <a href="asakusa-sensoji-worship-guide.html" class="related-card">
+                    <h3>浅草寺で願いを込めて</h3>
+                    <p>QR多言語ガイドが導く参拝の作法</p>
+                </a>
+                <a href="tokyo-tea-ceremony-etiquette-guide.html" class="related-card">
+                    <h3>一期一会の心を世界へ</h3>
+                    <p>茶道体験をQRコードで15言語おもてなし</p>
+                </a>
+            </div>
+        </aside>
     </article>
 
     <!-- フッター -->
