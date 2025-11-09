@@ -13,6 +13,21 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&h=630&fit=crop">
     <meta property="og:site_name" content="おもてなしQRメーカー">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZFSZEKEPE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BZFSZEKEPE');
+
+        // SEO用イベント
+        gtag('event', 'view_article', {
+            content_category: 'ブログ記事',
+            content_type: 'ブログ記事'
+        });
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
