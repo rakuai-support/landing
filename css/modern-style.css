@@ -2703,7 +2703,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* フィルターセクション */
 .filter-section {
-    padding: 0 0 2rem 0;
+    padding: 2rem 0 2.5rem 0;
     background-color: var(--color-background);
 }
 
@@ -2740,7 +2740,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ブログセクション */
 .blog-section {
-    padding: 4rem 0;
+    padding: 2rem 0 4rem 0;
 }
 
 .blog-grid {

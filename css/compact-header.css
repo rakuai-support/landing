@@ -1,49 +1,49 @@
 /* Compact Examples Header Styles */
 #compact-examples-header {
     text-align: center;
-    padding: 2rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.5rem 0;
+    background: linear-gradient(135deg, #0055A4 0%, #1D9BF0 100%);
     color: white;
 }
 
 #compact-examples-header h1 {
     font-size: 1.8rem;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.3rem 0;
     font-weight: 700;
 }
 
 #compact-examples-header p {
-    font-size: 1rem;
-    margin: 0 0 1rem 0;
+    font-size: 0.95rem;
+    margin: 0 0 0.8rem 0;
     opacity: 0.9;
 }
 
 #compact-examples-stats {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
 .compact-stat-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     background: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .compact-stat-number {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #fbbf24;
 }
 
 .compact-stat-label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     opacity: 0.9;
 }
 
