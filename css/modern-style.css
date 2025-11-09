@@ -2703,7 +2703,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* フィルターセクション */
 .filter-section {
-    padding: 0 0 2rem 0;
+    padding: 2rem 0 2.5rem 0;
     background-color: var(--color-background);
 }
 
@@ -2740,7 +2740,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ブログセクション */
 .blog-section {
-    padding: 4rem 0;
+    padding: 2rem 0 4rem 0;
 }
 
 .blog-grid {
@@ -2758,6 +2758,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     animation: fadeInUp 0.6s ease-out;
+    position: relative;
 }
 
 .blog-card:hover {
@@ -2810,6 +2811,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-content {
     padding: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .blog-meta {
@@ -2870,11 +2873,19 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: static;
+}
+
+/* カード全体をクリック可能にするオーバーレイ */
+.blog-card .read-more::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
 }
 
 .read-more:hover {
     color: #5568d3;
-    transform: translateX(4px);
 }
 
 /* ページネーション */
