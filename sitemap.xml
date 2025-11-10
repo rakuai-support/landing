@@ -3,7 +3,7 @@
   <!-- ランディングページメイン -->
   <url>
     <loc>https://lp.omotenashiqr.com/</loc>
-    <lastmod>2025-11-10</lastmod>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -29,6 +29,18 @@
     <priority>0.9</priority>
   </url>
   <!-- ブログ記事 -->
+  <url>
+    <loc>https://lp.omotenashiqr.com/blog/restaurant-deaf-accessibility-deaflympics2025-qr.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lp.omotenashiqr.com/blog/onsen-ryokan-bathing-manner-multilingual-qr.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://lp.omotenashiqr.com/blog/hotel-foreign-guest-checkin-multilingual-qr.html</loc>
     <lastmod>2025-11-10</lastmod>
