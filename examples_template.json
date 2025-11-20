@@ -1,0 +1,15 @@
+{
+    "id": "new_example_id",
+    "industry": "新しい業界",
+    "business_type": "新しい業種",
+    "language": "新しい言語",
+    "title": "新しい事例のタイトル",
+    "description": "ここに新しい事例の説明を記述します。",
+    "qr_image": "qr/qr_new_example_id.png",
+    "video_thumbnail": "images/new_example_thumbnail.png",
+    "video_url": "https://omotenashiqr.com/v/new_example_video_id",
+    "note_url": "https://note.com/new_example_note_url",
+    "tags": ["新しいタグ1", "新しいタグ2"],
+    "created_at": "YYYY-MM-DD",
+    "featured": false
+}

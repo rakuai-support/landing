@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:note.com)",
+      "Read(C:\\Users\\utaka\\OmotenashiQRMaker\\templates/**)",
+      "Bash(dir \"C:\\Users\\utaka\\OmotenashiQRMaker\\landing\\blog\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(find:*)",
+      "Bash(py:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

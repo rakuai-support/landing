@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | おもてなしQRメーカー</title>
+    <meta name="description" content="多言語AI動画作成サービス「おもてなしQRメーカー」へのお問い合わせはこちら。サービス導入のご相談、料金プラン、技術的なご質問など、お気軽にご連絡ください。">
+
+    <!-- 既存のスタイルやフォントを読み込む -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/modern-style.css?v=20250913">
+    <link rel="stylesheet" href="css/compact-header.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZFSZEKEPE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BZFSZEKEPE');
+    </script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <p class="logo-title">🎬 OmotenashiQRMaker</p>
+                    <p>AIが多言語音声動画を簡単作成</p>
+                </a>
+            </div>
+            <nav class="nav" id="main-nav">
+                <a href="index.html" class="nav-link">TOP</a>
+                <a href="examples.html" class="nav-link">事例集</a>
+                <a href="blog.html" class="nav-link">ブログ</a>
+                <a href="guide.html" class="nav-link">操作ガイド</a>
+                <a href="contact.html" class="nav-link">お問い合わせ</a>
+                <a href="https://omotenashiqr.com/login" class="btn-primary desktop-cta-btn">今すぐ始める</a>
+            </nav>
+            <div class="mobile-header-actions">
+                <a href="https://omotenashiqr.com/login" class="btn-primary mobile-cta-btn">今すぐ始める</a>
+                <div class="hamburger-menu" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ページヘッダー -->
+    <section id="compact-examples-header">
+        <div class="container">
+            <h1 style="color: white;">お問い合わせ</h1>
+            <p style="color: white;">サービスに関するご質問、料金プラン、導入のご相談など、お気軽にお問い合わせください</p>
+        </div>
+    </section>
+
+    <div class="main-content-wrapper">
+        <section class="contact-form-section">
+            <div class="container">
+
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                        <p class="error-message"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">会社名・団体名</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                        <p class="error-message"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact_type">お問い合わせ種別 <span class="required">*</span></label>
+                        <select id="contact_type" name="contact_type" required>
+                            <option value="">選択してください</option>
+                            <option value="サービスに関するご質問">サービスに関するご質問</option>
+                            <option value="料金プランについて">料金プランについて</option>
+                            <option value="導入のご相談">導入のご相談</option>
+                            <option value="技術的な問題">技術的な問題</option>
+                            <option value="その他">その他</option>
+                        </select>
+                        <p class="error-message"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="8" required></textarea>
+                        <p class="error-message"></p>
+                    </div>
+
+                    <div class="form-group privacy-consent">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">
+                            <a href="privacy.html" target="_blank">プライバシーポリシー</a>に同意します <span class="required">*</span>
+                        </label>
+                        <p class="error-message"></p>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="submit-btn" class="btn-primary large">送信する</button>
+                    </div>
+                </form>
+                
+                <div id="form-result" class="form-result-message" style="display: none;"></div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>🎬 OmotenashiQRMaker</h3>
+                    <p>AIが多言語音声動画を簡単作成</p>
+                </div>
+                <div class="footer-col">
+                    <h4>サービス</h4>
+                    <a href="index.html#features">機能紹介</a>
+                    <a href="index.html#pricing">料金プラン</a>
+                    <a href="examples.html">事例集</a>
+                    <a href="guide.html">操作ガイド</a>
+                    <a href="https://omotenashiqr.com/login">アプリを開く</a>
+                </div>
+                <div class="footer-col">
+                    <h4>法的事項</h4>
+                    <a href="terms.html">利用規約</a>
+                    <a href="privacy.html">プライバシーポリシー</a>
+                    <a href="scta.html">特定商取引法</a>
+                </div>
+                <div class="footer-col">
+                    <h4>お問い合わせ</h4>
+                    <a href="contact.html">お問い合わせフォーム</a>
+                    <p><a href="https://www.smilefactory-rakuai.com/" target="_blank" rel="noopener">かわさき楽AIサポート</a></p>
+                    <p><a href="mailto:admin@smilefactory-rakuai.com">admin@smilefactory-rakuai.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 かわさき楽AIサポート. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 共通スクリプト -->
+    <script src="js/main.js?v=20250913"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const submitButton = document.getElementById('submit-btn');
+    const formResult = document.getElementById('form-result');
+
+    const fields = {
+        name: document.getElementById('name'),
+        email: document.getElementById('email'),
+        contact_type: document.getElementById('contact_type'),
+        message: document.getElementById('message'),
+        privacy: document.getElementById('privacy')
+    };
+
+    const showError = (field, message) => {
+        field.classList.add('invalid');
+        const errorElement = field.parentElement.querySelector('.error-message');
+        if (errorElement) {
+            errorElement.textContent = message;
+        }
+    };
+
+    const clearError = (field) => {
+        field.classList.remove('invalid');
+        const errorElement = field.parentElement.querySelector('.error-message');
+        if (errorElement) {
+            errorElement.textContent = '';
+        }
+    };
+
+    const validateForm = () => {
+        let isValid = true;
+        Object.values(fields).forEach(field => clearError(field));
+
+        if (!fields.name.value.trim()) {
+            showError(fields.name, 'お名前を入力してください。');
+            isValid = false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!fields.email.value.trim()) {
+            showError(fields.email, 'メールアドレスを入力してください。');
+            isValid = false;
+        } else if (!emailRegex.test(fields.email.value.trim())) {
+            showError(fields.email, '有効なメールアドレスを入力してください。');
+            isValid = false;
+        }
+        
+        if (!fields.contact_type.value) {
+            showError(fields.contact_type, 'お問い合わせ種別を選択してください。');
+            isValid = false;
+        }
+
+        if (!fields.message.value.trim()) {
+            showError(fields.message, 'お問い合わせ内容を入力してください。');
+            isValid = false;
+        }
+
+        if (!fields.privacy.checked) {
+            showError(fields.privacy, 'プライバシーポリシーへの同意が必要です。');
+            isValid = false;
+        }
+
+        return isValid;
+    };
+    
+    Object.values(fields).forEach(field => {
+        const eventType = field.type === 'checkbox' || field.tagName === 'SELECT' ? 'change' : 'input';
+        field.addEventListener(eventType, () => clearError(field));
+    });
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (!validateForm()) {
+            return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.textContent = '送信中...';
+        formResult.style.display = 'none';
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch('https://omotenashiqr.com/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                // フォームと説明を非表示
+                form.style.display = 'none';
+                document.querySelector('.contact-form-section .section-description').style.display = 'none';
+
+                // 詳細な成功画面を表示
+                document.querySelector('.contact-form-section .section-title').style.display = 'none';
+
+                formResult.innerHTML = `
+                    <div class="success-details">
+                        <div class="success-header">
+                            <h2>🎉 送信完了しました</h2>
+                            <p>お問い合わせいただき、誠にありがとうございます</p>
+                        </div>
+
+                        <div class="success-content">
+                            <div class="success-info">
+                                <h3>📧 確認メールをお送りしました</h3>
+                                <p>ご入力いただいたメールアドレス宛に、お問い合わせ内容の確認メールをお送りしました。</p>
+                                <ul>
+                                    <li><strong>返信予定:</strong> 通常1〜2営業日以内にご返信いたします</li>
+                                    <li><strong>緊急の場合:</strong> admin@omotenashiqr.com まで直接ご連絡ください</li>
+                                    <li><strong>メールが届かない場合:</strong> 迷惑メールフォルダもご確認ください</li>
+                                </ul>
+                            </div>
+
+                            <div class="contact-methods">
+                                <div class="contact-method">
+                                    <strong>📧 直接メール</strong>
+                                    <a href="mailto:admin@omotenashiqr.com">admin@omotenashiqr.com</a>
+                                </div>
+                                <div class="contact-method">
+                                    <strong>🌐 ホームページ</strong>
+                                    <a href="https://lp.omotenashiqr.com/" target="_blank">サービス詳細を見る</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="success-cta">
+                            <h3>🎬 まだサービスをお試しでない方へ</h3>
+                            <p>無料で動画作成をお試しください！<br>
+                            新規登録時に<strong>15コイン（約15分の動画作成）</strong>をプレゼント中！</p>
+                            <a href="https://omotenashiqr.com/login" class="cta-button-success" target="_blank">無料で動画を作成する</a>
+                        </div>
+                    </div>
+                `;
+                formResult.className = 'form-result-message success';
+                formResult.style.display = 'block';
+            } else {
+                throw new Error('Server responded with an error.');
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            formResult.textContent = '申し訳ありません。メッセージの送信に失敗しました。時間をおいてから再度お試しいただくか、別の方法でお問い合わせください。';
+            formResult.className = 'form-result-message error';
+            submitButton.disabled = false;
+            submitButton.textContent = '送信する';
+        }
+    });
+});
+</script>
+</body>
+</html>

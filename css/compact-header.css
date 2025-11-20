@@ -1,0 +1,67 @@
+/* Compact Examples Header Styles */
+#compact-examples-header {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: linear-gradient(135deg, #0055A4 0%, #1D9BF0 100%);
+    color: white;
+}
+
+#compact-examples-header h1 {
+    font-size: 1.8rem;
+    margin: 0 0 0.3rem 0;
+    font-weight: 700;
+}
+
+#compact-examples-header p {
+    font-size: 0.95rem;
+    margin: 0 0 0.8rem 0;
+    opacity: 0.9;
+}
+
+#compact-examples-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.compact-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.compact-stat-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fbbf24;
+}
+
+.compact-stat-label {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    #compact-examples-stats {
+        gap: 1rem;
+    }
+    
+    .compact-stat-item {
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .compact-stat-number {
+        font-size: 1.3rem;
+    }
+    
+    .compact-stat-label {
+        font-size: 0.8rem;
+    }
+}
